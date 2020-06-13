@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:size=10";
+static char *font = "monospace:pixelsize=14";
 static int borderpx = 2;
 
 /*
@@ -203,6 +203,208 @@ static const char *colorname[] = {
 /*         [257] = "#ebdbb2", */
 /* }; */
 
+/* palenight */
+/* static const char *colorname[] = { */
+
+/*   /1* 8 normal colors *1/ */
+/*   [0] = "#292D3E", /1* black   *1/ */
+/*   [1] = "#ff5370", /1* red     *1/ */
+/*   [2] = "#C3E88D", /1* green   *1/ */
+/*   [3] = "#fbb829", /1* yellow  *1/ */
+/*   [4] = "#939ede", /1* blue    *1/ */
+/*   [5] = "#c792ea", /1* magenta *1/ */
+/*   [6] = "#89DDFF", /1* cyan    *1/ */
+/*   [7] = "#bfc7d5", /1* white   *1/ */
+
+/*   /1* 8 bright colors *1/ */
+/*   [8]  = "#2C323C", /1* black   *1/ */
+/*   [9]  = "#f75341", /1* red     *1/ */
+/*   [10] = "#98bc37", /1* green   *1/ */
+/*   [11] = "#fed06e", /1* yellow  *1/ */
+/*   [12] = "#68a8e4", /1* blue    *1/ */
+/*   [13] = "#ff5c8f", /1* magenta *1/ */
+/*   [14] = "#53fde9", /1* cyan    *1/ */
+/*   [15] = "#fce8c3", /1* white   *1/ */
+
+/*   /1* special colors *1/ */
+/*   [256] = "#1c1b19", /1* background *1/ */
+/*   [257] = "#fce8c3", /1* foreground *1/ */
+/* }; */
+
+/*
+* base16-grayscale-dark-theme.h
+*
+* Base16: (https://github.com/chriskempson/base16)
+*
+* Authors:
+*
+* Scheme: Alexandre Gavioli (https://github.com/Alexx2/)
+* Template: Honza Pokorny <me@honza.ca>
+*
+*/
+
+
+/* static const char *colorname[] = { */
+/*   "#101010", /1* base00 *1/ */
+/*   "#7c7c7c", /1* base08 *1/ */
+/*   "#8e8e8e", /1* base0B *1/ */
+/*   "#a0a0a0", /1* base0A *1/ */
+/*   "#686868", /1* base0D *1/ */
+/*   "#747474", /1* base0E *1/ */
+/*   "#868686", /1* base0C *1/ */
+/*   "#b9b9b9", /1* base05 *1/ */
+/*   "#525252", /1* base03 *1/ */
+/*   "#999999", /1* base09 *1/ */
+/*   "#252525", /1* base01 *1/ */
+/*   "#464646", /1* base02 *1/ */
+/*   "#ababab", /1* base04 *1/ */
+/*   "#e3e3e3", /1* base06 *1/ */
+/*   "#5e5e5e", /1* base0F *1/ */
+/*   "#f7f7f7", /1* base07 *1/ */
+/* }; */
+
+/* unsigned int defaultfg = 7; */
+/* unsigned int defaultbg = 0; */
+/* static unsigned int defaultcs = 13; */
+/* static unsigned int defaultrcs = 0; */
+
+/* monochrome */
+/* static const char *colorname[] = { */
+/*   [0] = "#797979", */
+/*   [1] = "#ffffff", */
+/*   [2] = "#888888", */
+/*   [3] = "#ffffff", */
+/*   [4] = "#888888", */
+/*   [5] = "#ffffff", */
+/*   [6] = "#888888", */
+/*   [7] = "#ffffff", */
+
+/*   [8]  = "#888888", */
+/*   [9]  = "#ffffff", */
+/*   [10] = "#888888", */
+/*   [11] = "#ffffff", */
+/*   [12] = "#888888", */
+/*   [13] = "#ffffff", */
+/*   [14] = "#888888", */
+/*   [15] = "#ffffff", */
+
+/*   [256] = "#080808", /1* background *1/ */
+/*   [257] = "#F9F9F9", /1* foreground *1/ */
+/* }; */
+
+/* apprentice */
+/* static const char *colorname[] = { */
+/*   [0] = "#1C1C1C", */
+/*   [1] = "#AF5F5F", */
+/*   [2] = "#5F875F", */
+/*   [3] = "#87875F", */
+/*   [4] = "#5F87AF", */
+/*   [5] = "#5F5F87", */
+/*   [6] = "#5F8787", */
+/*   [7] = "#6C6C6C", */
+
+/*   [8]  = "#444444", */
+/*   [9]  = "#FF8700", */
+/*   [10] = "#87AF87", */
+/*   [11] = "#FFFFAF", */
+/*   [12] = "#8FAFD7", */
+/*   [13] = "#8787AF", */
+/*   [14] = "#5FAFAF", */
+/*   [15] = "#FFFFFF", */
+
+/*   [256] = "#262626", */
+/*   [257] = "#BCBCBC", */
+/* }; */
+
+/* nord */
+/* static const char *colorname[] = { */
+/*     "#3b4252", /1* black   *1/ */
+/*     "#bf616a", /1* red     *1/ */
+/*     "#a3be8c", /1* green   *1/ */
+/*     "#ebcb8b", /1* yellow  *1/ */
+/*     "#81a1c1", /1* blue    *1/ */
+/*     "#b48ead", /1* magenta *1/ */
+/*     "#88c0d0", /1* cyan    *1/ */
+/*     "#e5e9f0", /1* white   *1/ */
+
+/*     "#4c566a", /1* black   *1/ */
+/*     "#bf616a", /1* red     *1/ */
+/*     "#a3be8c", /1* green   *1/ */
+/*     "#ebcb8b", /1* yellow  *1/ */
+/*     "#81a1c1", /1* blue    *1/ */
+/*     "#b48ead", /1* magenta *1/ */
+/*     "#8fbcbb", /1* cyan    *1/ */
+/*     "#eceff4", /1* white   *1/ */
+/*     [255] = 0, */
+/*     "#2e3440", /1* background *1/ */
+/*     "#d8dee9", /1* foreground *1/ */
+/* }; */
+
+/* iceberg */
+/* static const char *colorname[] = { */
+/*   /1* 8 normal colors *1/ */
+/*   "#161821", /1* black   *1/ */
+/*   "#e27878", /1* red     *1/ */
+/*   "#b4be82", /1* green   *1/ */
+/*   "#e2a478", /1* yellow  *1/ */
+/*   "#84a0c6", /1* blue    *1/ */
+/*   "#a093c7", /1* magenta *1/ */
+/*   "#89b8c2", /1* cyan    *1/ */
+/*   "#c6c8d1", /1* white   *1/ */
+
+/*   /1* 8 bright colors *1/ */
+/*   "#6b7089", /1* black   *1/ */
+/*   "#e98989", /1* red     *1/ */
+/*   "#c0ca8e", /1* green   *1/ */
+/*   "#e9b189", /1* yellow  *1/ */
+/*   "#91acd1", /1* blue    *1/ */
+/*   "#ada0d3", /1* magenta *1/ */
+/*   "#95c4ce", /1* cyan    *1/ */
+/*   "#d2d4de", /1* white   *1/ */
+/* }; */
+
+/* unsigned int defaultfg = 7; */
+/* unsigned int defaultbg = 0; */
+/* static unsigned int defaultcs = 13; */
+/* static unsigned int defaultrcs = 0; */
+
+/*
+* base16-tomorrow-night-theme.h
+*
+* Base16: (https://github.com/chriskempson/base16)
+*
+* Authors:
+*
+* Scheme: Chris Kempson (http://chriskempson.com)
+* Template: Honza Pokorny <me@honza.ca>
+*
+*/
+
+
+/* static const char *colorname[] = { */
+/*   "#1d1f21", /1* base00 *1/ */
+/*   "#cc6666", /1* base08 *1/ */
+/*   "#b5bd68", /1* base0B *1/ */
+/*   "#f0c674", /1* base0A *1/ */
+/*   "#81a2be", /1* base0D *1/ */
+/*   "#b294bb", /1* base0E *1/ */
+/*   "#8abeb7", /1* base0C *1/ */
+/*   "#c5c8c6", /1* base05 *1/ */
+/*   "#969896", /1* base03 *1/ */
+/*   "#de935f", /1* base09 *1/ */
+/*   "#282a2e", /1* base01 *1/ */
+/*   "#373b41", /1* base02 *1/ */
+/*   "#b4b7b4", /1* base04 *1/ */
+/*   "#e0e0e0", /1* base06 *1/ */
+/*   "#a3685a", /1* base0F *1/ */
+/*   "#ffffff", /1* base07 *1/ */
+/* }; */
+
+/* unsigned int defaultfg = 7; */
+/* unsigned int defaultbg = 0; */
+/* static unsigned int defaultcs = 13; */
+/* static unsigned int defaultrcs = 0; */
+
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
@@ -210,7 +412,7 @@ static const char *colorname[] = {
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Colors used, when the specific fg == defaultfg. So in reverse mode this

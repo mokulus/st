@@ -5,8 +5,11 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:pixelsize=14";
+static char *font = "monospace:size=12:antialias=true:autohint=true";
 static int borderpx = 2;
+static int disablebold = 0;
+static int disableitalic = 0;
+static int disableroman = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -93,7 +96,7 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-/* default */
+/* Terminal colors (16 first used in escape sequence) */
 /* static const char *colorname[] = { */
 /* 	/1* 8 normal colors *1/ */
 /* 	"black", */
@@ -116,41 +119,90 @@ unsigned int tabspaces = 8;
 /* 	"white", */
 
 /* 	[255] = 0, */
-/*         "black", */
-/*         "white", */
 
 /* 	/1* more colors can be added after 255 to use with DefaultXX *1/ */
-/* 	"#cccccc", */
-/* 	"#555555", */
+/* 	"black", */
+/* 	"white", */
 /* }; */
 
-/* srcery */
+/* default */
+/* static const char *colorname[] = { */
+/* 	/1* 8 normal colors *1/ */
+/* 	"#000000", */
+/* 	"#aa0000", */
+/* 	"#00aa00", */
+/* 	"#aaaa00", */
+/* 	"#0000aa", */
+/* 	"#aa00aa", */
+/* 	"#00aaaa", */
+/* 	"#aaaaaa", */
+
+/* 	/1* 8 bright colors *1/ */
+/* 	"#555555", */
+/* 	"#ff5555", */
+/* 	"#55ff55", */
+/* 	"#ffff55", */
+/* 	"#5555ff", */
+/* 	"#ff55ff", */
+/* 	"#55ffff", */
+/* 	"#ffffff", */
+
+/* 	[255] = 0, */
+/*         "#000000", */
+/*         "#ffffff", */
+/* }; */
+
+/* vscode */
 static const char *colorname[] = {
+	"#000000",
+	"#cd3131",
+	"#0dbc79",
+	"#e5e510",
+	"#2472c8",
+	"#bc3fbc",
+	"#11a8cd",
+	"#e5e5e5",
 
-  /* 8 normal colors */
-  [0] = "#1c1b19", /* black   */
-  [1] = "#ef2f27", /* red     */
-  [2] = "#519f50", /* green   */
-  [3] = "#fbb829", /* yellow  */
-  [4] = "#2c78bf", /* blue    */
-  [5] = "#e02c6d", /* magenta */
-  [6] = "#0aaeb3", /* cyan    */
-  [7] = "#d0bfa1", /* white   */
+	"#666666",
+	"#f14c4c",
+	"#23d18b",
+	"#f5f543",
+	"#3b8eea",
+	"#d670d6",
+	"#29b8db",
+	"#e5e5e5",
 
-  /* 8 bright colors */
-  [8]  = "#918175", /* black   */
-  [9]  = "#f75341", /* red     */
-  [10] = "#98bc37", /* green   */
-  [11] = "#fed06e", /* yellow  */
-  [12] = "#68a8e4", /* blue    */
-  [13] = "#ff5c8f", /* magenta */
-  [14] = "#53fde9", /* cyan    */
-  [15] = "#fce8c3", /* white   */
-
-  /* special colors */
-  [256] = "#1c1b19", /* background */
-  [257] = "#fce8c3", /* foreground */
+        [256] = "#000000",
+        [257] = "#e5e5e5",
 };
+
+/* srcery */
+// static const char *colorname[] = {
+
+//   /* 8 normal colors */
+//   [0] = "#1c1b19", /* black   */
+//   [1] = "#ef2f27", /* red     */
+//   [2] = "#519f50", /* green   */
+//   [3] = "#fbb829", /* yellow  */
+//   [4] = "#2c78bf", /* blue    */
+//   [5] = "#e02c6d", /* magenta */
+//   [6] = "#0aaeb3", /* cyan    */
+//   [7] = "#d0bfa1", /* white   */
+
+//   /* 8 bright colors */
+//   [8]  = "#918175", /* black   */
+//   [9]  = "#f75341", /* red     */
+//   [10] = "#98bc37", /* green   */
+//   [11] = "#fed06e", /* yellow  */
+//   [12] = "#68a8e4", /* blue    */
+//   [13] = "#ff5c8f", /* magenta */
+//   [14] = "#53fde9", /* cyan    */
+//   [15] = "#fce8c3", /* white   */
+
+//   /* special colors */
+//   [256] = "#1c1b19", /* background */
+//   [257] = "#fce8c3", /* foreground */
+// };
 
 /* modified gruvbox */
 /* static const char *colorname[] = { */
@@ -270,26 +322,26 @@ static const char *colorname[] = {
 
 /* monochrome */
 /* static const char *colorname[] = { */
-/*   [0] = "#797979", */
-/*   [1] = "#ffffff", */
-/*   [2] = "#888888", */
-/*   [3] = "#ffffff", */
-/*   [4] = "#888888", */
-/*   [5] = "#ffffff", */
-/*   [6] = "#888888", */
-/*   [7] = "#ffffff", */
+/*   [0] = "#41FF00", */
+/*   [1] = "#41FF00", */
+/*   [2] = "#41FF00", */
+/*   [3] = "#41FF00", */
+/*   [4] = "#41FF00", */
+/*   [5] = "#41FF00", */
+/*   [6] = "#41FF00", */
+/*   [7] = "#41FF00", */
 
-/*   [8]  = "#888888", */
-/*   [9]  = "#ffffff", */
-/*   [10] = "#888888", */
-/*   [11] = "#ffffff", */
-/*   [12] = "#888888", */
-/*   [13] = "#ffffff", */
-/*   [14] = "#888888", */
-/*   [15] = "#ffffff", */
+/*   [8]  = "#41FF00", */
+/*   [9]  = "#41FF00", */
+/*   [10] = "#41FF00", */
+/*   [11] = "#41FF00", */
+/*   [12] = "#41FF00", */
+/*   [13] = "#41FF00", */
+/*   [14] = "#41FF00", */
+/*   [15] = "#41FF00", */
 
-/*   [256] = "#080808", /1* background *1/ */
-/*   [257] = "#F9F9F9", /1* foreground *1/ */
+/*   [256] = "#000000", /1* background *1/ */
+/*   [257] = "#41FF00", /1* foreground *1/ */
 /* }; */
 
 /* apprentice */

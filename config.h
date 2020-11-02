@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:size=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "monospace:pixelsize=18";
+static int borderpx = 0;
 static int disablebold = 0;
 static int disableitalic = 0;
 static int disableroman = 0;
